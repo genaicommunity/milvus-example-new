@@ -1,0 +1,37 @@
+[
+  {
+    "query": "Which EC2 instances are underutilized?",
+    "intent": "utilization_low",
+    "keywords": ["underutilized", "ec2", "idle", "waste"]
+  },
+  {
+    "query": "Show me CPU utilization across all instances",
+    "intent": "utilization_metrics",
+    "keywords": ["cpu", "utilization", "metrics", "performance"]
+  },
+  {
+    "query": "What resources can be rightsized?",
+    "intent": "rightsizing",
+    "keywords": ["rightsize", "optimize", "resize", "recommendations"]
+  },
+  {
+    "query": "Find unused EBS volumes and snapshots",
+    "intent": "waste_detection",
+    "keywords": ["unused", "ebs", "snapshots", "orphaned"]
+  },
+  {
+    "query": "What's our reserved instance coverage?",
+    "intent": "ri_coverage",
+    "keywords": ["reserved", "coverage", "commitment", "savings"]
+  },
+  {
+    "query": "Show me Spot instance utilization and interruptions",
+    "intent": "spot_analysis",
+    "keywords": ["spot", "interruption", "savings", "availability"]
+  },
+  {
+    "query": "Which Lambda functions have low invocation rates?",
+    "intent": "serverless_utilization",
+    "keywords": ["lambda", "invocation", "serverless", "usage"]
+  }
+]

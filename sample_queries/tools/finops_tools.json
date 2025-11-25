@@ -1,0 +1,50 @@
+[
+  {
+    "tool": "AWS Cost Explorer",
+    "description": "Native AWS tool for analyzing and visualizing AWS costs and usage over time. Supports filtering by service, linked account, tags, and provides forecasting capabilities.",
+    "capabilities": ["cost analysis", "forecasting", "savings plans recommendations", "reserved instance recommendations"],
+    "category": "cloud_native"
+  },
+  {
+    "tool": "AWS Budgets",
+    "description": "Set custom budgets that alert you when costs or usage exceed or are forecasted to exceed your thresholds. Supports cost, usage, reservation, and savings plans budgets.",
+    "capabilities": ["budget alerts", "threshold notifications", "cost tracking", "automated actions"],
+    "category": "cloud_native"
+  },
+  {
+    "tool": "CloudHealth by VMware",
+    "description": "Multi-cloud cost management platform providing cost optimization, governance, and security insights across AWS, Azure, GCP, and data centers.",
+    "capabilities": ["multi-cloud", "rightsizing", "reserved instance management", "showback/chargeback"],
+    "category": "third_party"
+  },
+  {
+    "tool": "Kubecost",
+    "description": "Real-time cost visibility and insights for Kubernetes workloads. Provides namespace, deployment, and pod-level cost allocation.",
+    "capabilities": ["kubernetes cost", "namespace allocation", "efficiency scoring", "alerts"],
+    "category": "kubernetes"
+  },
+  {
+    "tool": "Spot by NetApp",
+    "description": "Cloud infrastructure optimization platform focusing on compute cost reduction through spot instances, reserved capacity, and rightsizing.",
+    "capabilities": ["spot management", "elastigroup", "ocean kubernetes", "eco reserved"],
+    "category": "optimization"
+  },
+  {
+    "tool": "Infracost",
+    "description": "Cloud cost estimates for Terraform in pull requests. Shows cost impact of infrastructure changes before deployment.",
+    "capabilities": ["terraform cost", "PR comments", "cost policies", "CI/CD integration"],
+    "category": "shift_left"
+  },
+  {
+    "tool": "AWS Compute Optimizer",
+    "description": "ML-powered service that analyzes configuration and utilization metrics to recommend optimal AWS resources for workloads.",
+    "capabilities": ["ec2 rightsizing", "auto scaling groups", "lambda optimization", "ebs volumes"],
+    "category": "cloud_native"
+  },
+  {
+    "tool": "Vantage",
+    "description": "Modern cloud cost management platform with developer-friendly interface, Kubernetes cost allocation, and provider-agnostic approach.",
+    "capabilities": ["cost reports", "kubernetes", "virtual tagging", "cost anomalies"],
+    "category": "third_party"
+  }
+]

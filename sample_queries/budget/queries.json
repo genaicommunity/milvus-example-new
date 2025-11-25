@@ -1,0 +1,32 @@
+[
+  {
+    "query": "Are we on track to meet our quarterly budget?",
+    "intent": "budget_tracking",
+    "keywords": ["quarterly", "budget", "forecast", "track"]
+  },
+  {
+    "query": "Which departments are over budget?",
+    "intent": "budget_alert",
+    "keywords": ["over budget", "departments", "exceeded", "alert"]
+  },
+  {
+    "query": "What's our budget utilization percentage?",
+    "intent": "budget_utilization",
+    "keywords": ["utilization", "percentage", "consumed", "remaining"]
+  },
+  {
+    "query": "Set up budget alerts for production environment",
+    "intent": "budget_config",
+    "keywords": ["alerts", "threshold", "production", "notification"]
+  },
+  {
+    "query": "Compare actual spend vs forecasted budget",
+    "intent": "budget_variance",
+    "keywords": ["actual", "forecast", "variance", "comparison"]
+  },
+  {
+    "query": "Show me budget allocation by cost center",
+    "intent": "budget_allocation",
+    "keywords": ["cost center", "allocation", "distribution", "assigned"]
+  }
+]

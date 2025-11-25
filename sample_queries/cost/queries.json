@@ -1,0 +1,37 @@
+[
+  {
+    "query": "What is our total AWS spend this month?",
+    "intent": "cost_summary",
+    "keywords": ["aws", "spend", "monthly", "total"]
+  },
+  {
+    "query": "Show me EC2 costs broken down by instance type",
+    "intent": "cost_breakdown",
+    "keywords": ["ec2", "instance", "breakdown", "cost"]
+  },
+  {
+    "query": "Which services have the highest cost increase?",
+    "intent": "cost_anomaly",
+    "keywords": ["increase", "anomaly", "services", "highest"]
+  },
+  {
+    "query": "What are our data transfer costs between regions?",
+    "intent": "cost_detail",
+    "keywords": ["data transfer", "regions", "network", "egress"]
+  },
+  {
+    "query": "Show me cost allocation by team tags",
+    "intent": "cost_allocation",
+    "keywords": ["allocation", "tags", "team", "chargeback"]
+  },
+  {
+    "query": "What's the cost trend for RDS instances?",
+    "intent": "cost_trend",
+    "keywords": ["rds", "database", "trend", "history"]
+  },
+  {
+    "query": "Calculate our blended vs unblended rates",
+    "intent": "cost_analysis",
+    "keywords": ["blended", "unblended", "rates", "discount"]
+  }
+]
