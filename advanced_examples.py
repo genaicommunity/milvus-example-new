@@ -188,15 +188,29 @@ class AdvancedMilvusDB:
                 print(f"  {j+1}. Score: {similarity:.4f} | {hit.entity.get('text')[:60]}...")
             print()
 
-    def query_by_id(self, ids):
+    def query_by_id(self):
         """Example 5: Retrieve specific documents by ID"""
         print(f"{'='*80}")
         print(f"EXAMPLE 5: Query by ID")
         print(f"{'='*80}")
-        print(f"Fetching documents with IDs: {ids}\n")
+
+        # First, get some actual IDs from the collection
+        all_docs = self.collection.query(
+            expr="id >= 0",
+            output_fields=["id"],
+            limit=10
+        )
+
+        if len(all_docs) < 3:
+            print("Not enough documents in collection\n")
+            return
+
+        # Get first 3 actual IDs
+        actual_ids = [doc['id'] for doc in all_docs[:3]]
+        print(f"Fetching documents with IDs: {actual_ids}\n")
 
         results = self.collection.query(
-            expr=f"id in {ids}",
+            expr=f"id in {actual_ids}",
             output_fields=["id", "text", "category"]
         )
 
@@ -326,6 +340,7 @@ class SemanticCache:
         """Store query-response in cache"""
         embedding = self.db.model.encode([query])
         self.cache_collection.insert([[query], [response], embedding.tolist()])
+        self.cache_collection.flush()  # Ensure data is persisted before search
 
     def demo(self):
         """Demonstrate semantic caching"""
@@ -397,7 +412,7 @@ def main():
     db.batch_search(queries, top_k=2)
 
     # Example 5: Query by ID
-    db.query_by_id([1, 3, 5])
+    db.query_by_id()
 
     # Example 6: RAG Agent
     agent = RAGAgent(db)

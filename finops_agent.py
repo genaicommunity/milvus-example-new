@@ -261,7 +261,9 @@ class FinOpsVectorDB:
                 similarity = 1 / (1 + hit.distance)
 
                 if similarity >= score_threshold:
-                    metadata = json.loads(hit.entity.get('metadata', '{}'))
+                    # Get metadata - handle case where field might be empty
+                    metadata_str = hit.entity.get('metadata')
+                    metadata = json.loads(metadata_str) if metadata_str else {}
                     search_results.append(SearchResult(
                         text=hit.entity.get('text'),
                         score=similarity,
@@ -487,7 +489,10 @@ def main():
             print()
             print(f"Stats: {result['stats']}")
             print()
-            input("Press Enter for next query...")
+            try:
+                input("Press Enter for next query...")
+            except EOFError:
+                print()  # Non-interactive mode, continue
 
     except Exception as e:
         print(f"Error: {e}")
